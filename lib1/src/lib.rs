@@ -1,5 +1,5 @@
 #[no_mangle]
-pub fn add(left: usize, right: usize) -> usize {
+pub fn add(left: i32, right: i32) -> i32 {
     left + right
 }
 
