@@ -5,15 +5,15 @@ setup-wasm:
 
 build-wasm:
 	mkdir -p ./app/libs/
-	cd lib1 && \
+	cd libs/lib1 && \
 	cargo build --target wasm32-unknown-unknown --release && \
-	cp target/wasm32-unknown-unknown/release/lib1.wasm ../app/libs/
+	cp target/wasm32-unknown-unknown/release/lib1.wasm ../../app/libs/
 
 build-so:
 	mkdir -p ./app/libs/
-	cd lib1 && \
+	cd libs/lib1 && \
 	cargo build --release && \
-	cp target/release/liblib1.so ../app/libs/
+	cp target/release/liblib1.so ../../app/libs/
 
 build:
 	cd app && \
