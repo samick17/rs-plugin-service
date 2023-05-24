@@ -13,6 +13,11 @@ pub fn bar() -> String {
     String::from("asdfg")
 }
 
+#[no_mangle]
+pub fn handler() -> u32 {
+    0
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
