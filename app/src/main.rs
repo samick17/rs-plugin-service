@@ -1,14 +1,26 @@
-use wasmtime::*;
-use anyhow::Result;
+// use wasmtime::*;
+// use anyhow::Result;
+use color::*;
 
-fn main() -> Result<()> {
-    let engine = Engine::default();
-    let mut store = Store::new(&engine, ());
-    let module = Module::from_file(&engine, "./libs/lib1.wasm")?;
-    let instance = Instance::new(&mut store, &module, &[])?;
-    let add = instance.get_typed_func::<(i32, i32), i32>(&mut store, "add")?;
-    println!("Result: {}", add.call(&mut store, (1, 2)).unwrap());
-    Ok(())
+// fn main() -> Result<()> {
+//     let engine = Engine::default();
+//     let mut store = Store::new(&engine, ());
+//     let module = Module::from_file(&engine, "./libs/lib1.wasm")?;
+//     let instance = Instance::new(&mut store, &module, &[])?;
+//     let add = instance.get_typed_func::<(i32, i32), i32>(&mut store, "add")?;
+//     println!("Result: {}", add.call(&mut store, (1, 2)).unwrap());
+//     Ok(())
+// }
+
+fn main() {
+    println!("{}", color::black!("Plugin Service CLI"));
+    println!("{}", color::red!("Plugin Service CLI"));
+    println!("{}", color::green!("Plugin Service CLI"));
+    println!("{}", color::yellow!("Plugin Service CLI"));
+    println!("{}", color::blue!("Plugin Service CLI"));
+    println!("{}", color::magenta!("Plugin Service CLI"));
+    println!("{}", color::cyan!("Plugin Service CLI"));
+    println!("{}", color::white!("Plugin Service CLI"));
 }
 
 // use libloading::{Library, Symbol};
