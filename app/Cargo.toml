@@ -6,6 +6,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+cli = { "path" = "../libs/cli" }
+queue = { "path" = "../libs/queue" }
 color = { "path" = "../libs/color" }
 wasm_runner = { "path" = "../libs/wasm_runner" }
 so_runner = { "path" = "../libs/so_runner" }
