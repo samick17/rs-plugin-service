@@ -11,6 +11,8 @@ queue = { "path" = "../libs/queue" }
 color = { "path" = "../libs/color" }
 wasm_runner = { "path" = "../libs/wasm_runner" }
 so_runner = { "path" = "../libs/so_runner" }
+notify = "6.0.0"
+notify-debouncer-full = "0.1.0"
 
 [profile.release]
 lto = true
