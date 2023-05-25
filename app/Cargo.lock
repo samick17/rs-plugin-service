@@ -43,11 +43,10 @@ version = "0.1.0"
 dependencies = [
  "cli",
  "color",
- "notify",
- "notify-debouncer-full",
  "queue",
  "so_runner",
  "wasm_runner",
+ "watcher",
 ]
 
 [[package]]
@@ -1617,6 +1616,14 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c936a025be0417a94d6e9bf92bfdf9e06dbf63debf187b650d9c73a5add701f1"
 dependencies = [
  "wast",
+]
+
+[[package]]
+name = "watcher"
+version = "0.1.0"
+dependencies = [
+ "notify",
+ "notify-debouncer-full",
 ]
 
 [[package]]
