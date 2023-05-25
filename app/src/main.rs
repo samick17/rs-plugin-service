@@ -19,7 +19,7 @@ fn main() {
         loop {
             let text = get_input();
             println!("> {}", text);
-            tx_clone.send(String::from("asdfg")).unwrap();
+            tx_clone.send(text).unwrap();
         }
     });
 
@@ -27,6 +27,7 @@ fn main() {
         queue.enqueue(msg.clone());
         println!("Recv: {}", msg);
         println!("Size: {}", queue.len());
+        println!("{:?}", queue.slice());
     }
     
 

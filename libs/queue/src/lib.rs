@@ -22,4 +22,10 @@ impl<T> Queue<T> {
     pub fn len(&self) -> usize {
         self.items.len()
     }
+
+    pub fn slice(&mut self) -> Vec<T> {
+        let len = self.len();
+        let slice = self.items.drain(..len).collect();
+        slice
+    }
 }
