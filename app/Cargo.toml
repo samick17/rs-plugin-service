@@ -9,6 +9,7 @@ edition = "2021"
 cli = { "path" = "../libs/cli" }
 watcher = { "path" = "../libs/watcher" }
 queue = { "path" = "../libs/queue" }
+req_utils = { "path" = "../libs/req_utils" }
 color = { "path" = "../libs/color" }
 wasm_runner = { "path" = "../libs/wasm_runner" }
 so_runner = { "path" = "../libs/so_runner" }
