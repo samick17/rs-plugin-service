@@ -46,6 +46,7 @@ dependencies = [
  "queue",
  "req_utils",
  "so_runner",
+ "spider",
  "wasm_runner",
  "watcher",
 ]
@@ -1342,9 +1343,9 @@ dependencies = [
 
 [[package]]
 name = "regex"
-version = "1.8.2"
+version = "1.8.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d1a59b5d8e97dee33696bf13c5ba8ab85341c002922fba050069326b9c498974"
+checksum = "81ca098a9821bd52d6b24fd8b10bd081f47d39c22778cafaa75a2857a62c6390"
 dependencies = [
  "aho-corasick",
  "memchr",
@@ -1570,6 +1571,13 @@ checksum = "64a4a911eed85daf18834cfaa86a79b7d266ff93ff5ba14005426219480ed662"
 dependencies = [
  "libc",
  "winapi",
+]
+
+[[package]]
+name = "spider"
+version = "0.1.0"
+dependencies = [
+ "regex",
 ]
 
 [[package]]
