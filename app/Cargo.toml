@@ -18,3 +18,4 @@ so_runner = { "path" = "../libs/so_runner" }
 [profile.release]
 lto = true
 debug = false
+opt-level = "z"
