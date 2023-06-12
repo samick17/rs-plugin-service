@@ -2,21 +2,33 @@
 // mod main_runner;
 // mod main_watcher;
 // mod main_spider;
-use std::process::{Command};
-use std::thread;
-use std::time::{Duration};
+// mod main_spawn;
+mod main_broker;
+mod main_producer;
+use std::env;
+
 
 fn main() {
     // main_mp::main();
     // main_runner::main();
     // main_watcher::main();
     // main_spider::main();
-    let mut child = Command::new("ping")
-    .arg("localhost")
-    .spawn()
-    .expect("Failed to spawn child process");
-
-    thread::sleep(Duration::from_secs(3));
-    child.kill();
-    child.wait().unwrap();
+    // main_spawn::main();
+    let role = env::var("ROLE").unwrap_or(String::from("default"));
+    match role.as_str() {
+        "broker" => {
+            println!("[Broker]");
+            main_broker::main();
+        },
+        "producer" => {
+            println!("[Producer]");
+            main_producer::main();
+        },
+        "consumer" => {
+            println!("[Consumer]");
+        },
+        _ => {
+            println!("No role specified.");
+        },
+    }
 }

@@ -19,3 +19,12 @@ build:
 	cd app && \
 	cargo build --release && \
 	./target/release/app
+
+broker:
+	cd app && ROLE=broker cargo run
+
+producer:
+	cd app && ROLE=producer cargo run
+
+consumer:
+	cd app && ROLE=consumer cargo run
