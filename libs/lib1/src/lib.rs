@@ -15,7 +15,7 @@ pub fn bar() -> String {
 
 #[no_mangle]
 pub fn handler() -> u32 {
-    0
+    1
 }
 
 #[cfg(test)]

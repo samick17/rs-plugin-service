@@ -48,6 +48,7 @@ dependencies = [
  "so_runner",
  "spider",
  "wasm_runner",
+ "wasm_runner_manager",
  "watcher",
 ]
 
@@ -1949,6 +1950,13 @@ name = "wasm_runner"
 version = "0.1.0"
 dependencies = [
  "wasmtime",
+]
+
+[[package]]
+name = "wasm_runner_manager"
+version = "0.1.0"
+dependencies = [
+ "wasm_runner",
 ]
 
 [[package]]

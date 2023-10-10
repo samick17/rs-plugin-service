@@ -3,12 +3,14 @@
 // mod main_watcher;
 // mod main_spider;
 // mod main_spawn;
+// mod main_wasm;
 mod main_broker;
 mod main_producer;
 mod main_consumer;
-// mod main_wasm;
 
 use std::env;
+
+// use wasm_runner_manager::{create_manager};
 
 
 fn main() {
@@ -36,4 +38,8 @@ fn main() {
             println!("No role specified.");
         },
     }
+    // let mut mgr = create_manager();
+    // let plugin_name = "plugin1";
+    // mgr.load_plugin(plugin_name, "./libs/lib1.wasm", "handler");
+    // mgr.exec_plugin(plugin_name);
 }
